@@ -1,0 +1,99 @@
+% load lecture note class
+\documentclass{easyclass}
+\begin{document}
+\begin{titlepage}
+    \university{Universidade de Aveiro}
+    \courseid{}
+    \title{AR}
+    \author{Hugo Leal}
+    \version{2021 March}
+    \instructor{}
+    \maketitle
+\end{titlepage}
+
+\tableofcontents
+
+\section{Enterprise Network Design Topics}
+É a base do desenho de arquitetura de uma rede 
+\subsection{Aspetos fundamentais de uma rede}
+\begin{itemize}
+    \item A rede deve ser modular (possibilidade de colocar e tirar coisas da rede com o mínimo impacto) [Ex. Numa pandemia é desligado os switches que ligam todos os PCs uma vez que os trabalhadores estão em teletrabalho]
+    \begin{itemize}
+        \item Suportar crescimento/decréscimo e mudança
+        \item Mudar o tamanho de uma rede é mais fácil adicionando novos módulos do que fazer um completo redisign
+    \end{itemize}
+    \item A rede deve ser resiliente
+    \begin{itemize}
+        \item Estár sempre "up" ("up-time" próximo de 100\%)
+        \begin{itemize}
+            \item A falha de uma rede financial pode representar milhões em perda
+            \item A falha de rede num hospital pode fazer peder vidas
+        \end{itemize}
+        \item Mas a resiliência tem custos
+        \begin{itemize}
+            \item O nível de resiliência deve ser um "trade-off" entre o orçamento disponível e um risco aceitavel  
+        \end{itemize}
+    \end{itemize}
+    \item A rede deve ser flexível
+    \begin{itemize}
+        \item Mercados mudam e desenvolvem-se $ \mapsto $ A rede deve se adaptar rapidamente
+        \item Num contexto pandémico uma empresa de serviços a rede tem que se adaptar ao teletrabalho
+    \end{itemize}
+\end{itemize}
+\subsection{Equipamentos}
+\begin{itemize}
+    \item [Switches] Switches L2, Wireless Access Points (Diff. Velocidades, Protocolos)
+    \item [Routers] Layer3 com funcionalidades como QoS, Segurança, VPN gatways, Monitorização de redes (Hoje em dia grande parte destas funcionalidades são separadas para diferentes aparelhos)
+    \item [L3 Switch] Switch que já faz routing basico (Sw em hardware com Routing em software)
+    \item [Router com Sswitching] (Sw em Software com Routing em hardware)
+    \item [Security Appliances (Modulares)] 
+    \begin{itemize}
+        \item Firewalls (Regras e controlo do que passa e o que não passa)
+        \item IDS/IPS (Verificam anomalia no tráfego)
+        \item NAT/PAT(costuma ser feito na Firewall, para facilitar aplicação de regras)
+        \item VPN Gateway (Implementados no router ou na Firewall)
+        \item Services Proxy (Vídeos/Páginas mais comum ficam guardadas em cache.  Mais comum em empresas multimédia)
+    \end{itemize}
+    
+\end{itemize}
+\subsection{Como escolher equipamentos}
+\begin{itemize}
+    \item Tipo
+    
+    \begin{itemize}
+        \item L2 Switch, L3 Switch, Router, \dots, etc.
+    \end{itemize}
+
+    \item \textit{Manufactor}
+     
+    \begin{itemize}
+        \item Viabilidade
+        \begin{itemize}
+            \item Tentar obter o máximo de \textit{MTBF (Mean Time Betweebn Faliures)}
+        \end{itemize}
+    \end{itemize}
+
+    \item Range/Model
+    
+    \begin{itemize}
+        \item Quantas portas são precisas
+        \item Numero de portas
+        \begin{quotation}
+           [Projeto] Costumam ter 2 portas uma para resiliência outra para controlo remoto (As duas ligadas)
+        \end{quotation}
+
+        \begin{itemize}
+            \item Protocolos e funcionalidades suportadas
+            \item Determinação de requisitos de memória
+        \end{itemize}
+        \item Velocidade de processamento e de comunicação
+        \begin{itemize}
+            \item Numero de bytes/pacotes processados/comutados por segundo
+        \end{itemize}
+    \end{itemize}
+
+\end{itemize}
+
+%\bibliography{bibfile}
+
+\end{document}
