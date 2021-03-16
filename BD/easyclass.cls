@@ -209,7 +209,6 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
     \vspace{2cm}
     \@instructor
     \vspace{2cm}
-    \includegraphics[width=0.25\textwidth]{figures/funny.png}
     \vfill
     % Bottom of the page
     {\Large\itshape \@author \par}

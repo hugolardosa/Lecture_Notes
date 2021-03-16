@@ -1,5 +1,0 @@
-\babel@toc {portuguese}{}
-\contentsline {section}{\numberline {0.1}Introdução aos sistemas de bases de dados}{3}{section.0.1}%
-\contentsline {subsection}{\numberline {0.1.1}Conceito de Base de dados}{3}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {0.1.2}Processamento de dados isolados}{3}{subsection.0.1.2}%
-\contentsline {subsection}{\numberline {0.1.3}Sistema de Gestão de Ficheiros}{3}{subsection.0.1.3}%
